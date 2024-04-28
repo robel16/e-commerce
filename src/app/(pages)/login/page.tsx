@@ -1,5 +1,5 @@
 import React from 'react'
-import { Metadata, } from 'next'
+import { Metadata } from 'next'
 
 import { Gutter } from '../../_components/Gutter'
 import { RenderParams } from '../../_components/RenderParams'
@@ -18,22 +18,29 @@ export default async function Login() {
 
   return (
     <section className={classes.login}>
-<div className={classes.heroImg}>
-  <Link href='/'>
-    <Image src="/logo-White-Footer.svg" alt="logo" width={250} height={23} className={classes.logo} style={{marginLeft:'100px'}}/>
-  </Link>
-</div>
-<div className={classes.formWrapper }>
-  <div className={classes.formContainer}>
-    <RenderParams className={classes.params} />
-    <div className={classes.formTitle}>
-      <h3>Welcome</h3>
-      <Image src="/assets/icons/hand.png" alt='hand' width={30} height={30} />
-    </div>
-    <p > please Login Here</p>
-    <LoginForm/>
-  </div>
-</div>
+      <div className={classes.heroImg}>
+        <Link href="/">
+          <Image
+            src="/logo-White-Footer.svg"
+            alt="logo"
+            width={250}
+            height={23}
+            className={classes.logo}
+            style={{ marginLeft: '100px' }}
+          />
+        </Link>
+      </div>
+      <div className={classes.formWrapper}>
+        <div className={classes.formContainer}>
+          <RenderParams className={classes.params} />
+          <div className={classes.formTitle}>
+            <h3>Welcome</h3>
+            <Image src="/assets/icons/hand.png" alt="hand" width={30} height={30} />
+          </div>
+          <p> please Login Here</p>
+          <LoginForm />
+        </div>
+      </div>
     </section>
   )
 }
