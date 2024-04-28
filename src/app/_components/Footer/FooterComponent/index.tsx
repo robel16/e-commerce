@@ -11,7 +11,7 @@ import { Footer, Media } from '../../../../payload/payload-types'
 import { Button } from '../../Button'
 const FooterComponent = ({ footer }: { footer: Footer }) => {
   const Pathname = usePathname()
-  const navItems =footer?.navItems || []
+  const navItems = footer?.navItems || []
   return (
     <footer className={noHeaderFooterUrls.includes(Pathname) ? classes.hide : ' '}>
       <Gutter>
@@ -49,7 +49,13 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     newTab={true}
                     className={classes.socialLinkItem}
                   >
-                   <Image src={icon?.url} alt={item.link.label} width={24} height={24} className={classes.socialLinkItem} />
+                    <Image
+                      src={icon?.url}
+                      alt={item.link.label}
+                      width={24}
+                      height={24}
+                      className={classes.socialLinkItem}
+                    />
                   </Button>
                 )
               })}

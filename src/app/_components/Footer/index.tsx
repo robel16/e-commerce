@@ -16,14 +16,14 @@ export async function Footer() {
     // When deploying this template on Payload Cloud, this page needs to build before the APIs are live
     // So swallow the error here and simply render the footer without nav items if one occurs
     // in production you may want to redirect to a 404  page or at least log the error somewhere
-   console.error(error)
+    console.error(error)
   }
 
   const navItems = footer?.navItems || []
 
   return (
     <>
-    <FooterComponent footer={footer}/>
+      <FooterComponent footer={footer} />
     </>
   )
 }
